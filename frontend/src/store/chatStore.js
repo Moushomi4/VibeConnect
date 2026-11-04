@@ -5,7 +5,7 @@ import axiosInstance from "../services/url.service";
 export const useChatStore = create((set, get) => ({
   conversations: [],
   currentConversation: null,
-  message: [],
+  messages: [],
   loading: false,
   error: null,
   onlineUsers: new Map(),
@@ -162,7 +162,7 @@ export const useChatStore = create((set, get) => ({
     const senderId = formData.get("senderId");
     const receiverId = formData.get("receiverId");
     const media = formData.get("media");
-    const content = formData.et("content");
+    const content = formData.get("content");
     const messageStatus = formData.get("messageStatus");
 
     const socket = getSocket();

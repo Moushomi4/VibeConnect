@@ -203,7 +203,7 @@ const initializeSocket = (server) => {
       socket.leave(userId)
       console.log(`user ${userId} disconnected`)
     }catch(error){
-      console.errir("Error handling disconnected",error)
+      console.error("Error handling disconnected",error)
     }
   }
   socket.on("disconnect",handleDisconnected);
